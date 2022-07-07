@@ -21,7 +21,7 @@ public class Main {
         /**
          * Variable encargada de la ejecución en bucle del programa
          */
-        int flag = 0;
+        boolean flag = true;
         /**
          * Variable correspondiente al numero de opcion escogida por el usuario
          */
@@ -65,11 +65,12 @@ public class Main {
                         contactsArray=contactos.DeleteContact(contactsArray,id);
                         break;
                     case 5:
+                        flag=false;
                         break;
                     default:
                         System.out.println("Opción no valida");
                 }
-            }while (flag==0);
+            }while (flag);
 
         }catch (InputMismatchException exception){
             System.out.println("Mala elección");
