@@ -32,4 +32,19 @@ public class Contacts extends Persona{
         System.out.println("Contacto guardado");
         return contactsArray;
     }
+    public ArrayList upDateContact(ArrayList contactsArray,int id,Persona persona){
+        ArrayList<Persona> contactsArray2 = new ArrayList<>();
+        for (Object per:contactsArray) {
+            if(contactsArray.indexOf(per) == id-1){
+                contactsArray2.add(persona);
+            }
+            else{
+                contactsArray2.add((Persona) per);
+            }
+
+        }
+        return contactsArray2;
+    }
+
+
 }
