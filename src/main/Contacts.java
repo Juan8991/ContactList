@@ -1,5 +1,6 @@
 package main;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Contacts extends Persona{
@@ -45,6 +46,25 @@ public class Contacts extends Persona{
         }
         return contactsArray2;
     }
+    public ArrayList DeleteContact(ArrayList contactsArray,int id){
+        ArrayList<Persona> contactsArray2 = new ArrayList<>();
+        Persona p= new Persona();
+        int x = 1, sw = 0;
+        for (Object per:contactsArray) {
+            if(contactsArray.indexOf(per) == id-1){
+                sw = 1;
+                continue;
+            }else {
+                p=new Persona(((Persona) per).getName(),((Persona) per).getPhoneNumber(),(x));
+                contactsArray2.add(p);
+                x++;
+            }
+        }
+        if (sw == 1){
+            System.out.println("Dato eliminado");
+        }else System.out.println("Dato no existe");
 
+        return contactsArray2;
+    }
 
 }

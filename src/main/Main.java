@@ -60,7 +60,9 @@ public class Main {
                         contactsArray=contactos.upDateContact(contactsArray,id,new Persona(name,phoneNumber,id));
                         break;
                     case 4:
-
+                        System.out.println("Ingrese el id del contacto que desea borrar");
+                        id=in.nextInt();
+                        contactsArray=contactos.DeleteContact(contactsArray,id);
                         break;
                     case 5:
                         break;
