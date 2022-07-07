@@ -1,11 +1,25 @@
 package main;
 
 public class Persona {
-    private String name, phoneNumber;
+    protected String name, phoneNumber;
+    protected int id;
 
-    public Persona(String name, String phoneNumber) {
+
+    public Persona(String name, String phoneNumber,int id) {
         this.name = name;
         this.phoneNumber = phoneNumber;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Persona() {
     }
 
     public String getName() {
@@ -29,6 +43,7 @@ public class Persona {
         return "Contact{" +
                 "nombre='" + name + '\'' +
                 ", Número de telefono='" + phoneNumber + '\'' +
-                '}';
+                "id='" + id +
+                '}'+"\n";
     }
 }
