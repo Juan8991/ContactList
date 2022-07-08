@@ -23,6 +23,7 @@ public class Contacts extends Persona{
         contactsArray.add(contact3);
         contactsArray.add(contact4);
         contactsArray.add(contact5);
+
         return contactsArray;
     }
     public void showArray(ArrayList contactsArray ){
@@ -63,6 +64,7 @@ public class Contacts extends Persona{
         if (sw == 1){
             System.out.println("Dato eliminado");
         }else System.out.println("Dato no existe");
+        //contactsArray.remove(id);
 
         return contactsArray2;
     }
